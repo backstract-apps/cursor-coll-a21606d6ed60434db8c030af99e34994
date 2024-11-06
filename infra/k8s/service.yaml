@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cursor-coll-a21606d6ed60434db8c030af99e34994-srv
+spec:
+  selector:
+    app: cursor-coll-a21606d6ed60434db8c030af99e34994
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9024
+  type: ClusterIP

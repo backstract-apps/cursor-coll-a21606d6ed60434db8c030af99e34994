@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cursor-coll-a21606d6ed60434db8c030af99e34994-depl
+  labels:
+    app: cursor-coll-a21606d6ed60434db8c030af99e34994
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cursor-coll-a21606d6ed60434db8c030af99e34994
+  template:
+    metadata:
+      labels:
+        app: cursor-coll-a21606d6ed60434db8c030af99e34994
+    spec:
+      containers:
+        - name: cursor-coll-a21606d6ed60434db8c030af99e34994
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:cursor-coll-a21606d6ed60434db8c030af99e34994
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9024
